@@ -1,23 +1,13 @@
-let a = 5;
-const b = 2;
-const myName = "nico";
-const days = ['mon','tue','wed'];
-const player = {
-    name: "jiho",
-    point: 10,
-};
+const age = parseInt(prompt("how old are you?"));
 
-console.log(a + b);
-console.log(a * b);
-console.log(a / b);
-console.log(days);
-console.log(days[0])
-console.log(player)
-console.log(player.name)
-
-function sayHello(nameOfPerson, age) {
-    console.log(nameOfPerson);
+if(isNaN(age) || age<0){
+    console.log("Please write a real positive number");
+} else if(age < 18){
+    console.log("you are too young.");
+} else if(age >= 18 && age <= 50){
+    console.log("you can drink");
+} else if(age > 50 && age <= 80){
+    console.log("you should exercise");
+} else if(age > 80){
+    console.log("you can do whatever you want.");
 }
-
-sayHello("nico", 10);
-sayHello();
